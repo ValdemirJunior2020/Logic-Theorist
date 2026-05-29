@@ -8,7 +8,7 @@ const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:4000'
 const copy = {
   en: {
     title: 'Logic Theorist: Call Center Madness',
-    subtitle: 'Voice Matrix Edition — no Ticket Matrix puzzles, no boring P→Q nonsense.',
+    subtitle: 'Voice Matrix Edition — no Ticket Matrix puzzles.',
     start: 'Start Shift', next: 'Next Screaming Caller', submit: 'Lock Answer', save: 'Save Score to Logic Sheet',
     player: 'Operator Name', level: 'Level', score: 'Score', rage: 'Caller Rage', satisfaction: 'Satisfaction', queue: 'Incoming Logic Queue',
     engine: 'Logic Engine', source: 'Matrix source', rules: 'What the matrix says', answerSaved: 'Score saved to Google Sheet tab: Logic',
