@@ -181,7 +181,17 @@ export default function App() {
                 <li>✅ Correct Voice Matrix action = points + happy caller.</li>
                 <li>❌ Wrong action = rage meter rises and the phone gets haunted.</li>
                 <li>🔥 Higher levels increase computer heat and caller drama.</li>
-                <li>💾 Final scores save to your Google Sheet tab named <b>Logic</b>.</li>
+               <li>
+  💾 Final scores will be saved in this Google Sheet:{' '}
+  <a
+    href="https://docs.google.com/spreadsheets/d/1N9sTpYuszpMmlHQWm7uxWVnoYxuwhziEyjFaTh2z8Vs/edit?gid=1555259867#gid=1555259867"
+    target="_blank"
+    rel="noreferrer"
+    className="font-bold text-cyan-300 underline hover:text-yellow-300"
+  >
+    Logic Scores Sheet
+  </a>
+</li>
               </ul>
             </div>
           </section>
