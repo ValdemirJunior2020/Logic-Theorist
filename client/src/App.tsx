@@ -130,22 +130,23 @@ export default function App() {
     audio.volume = 0.35
     themeAudioRef.current = audio
 
-    const startThemeMusic = async () => {
-      if (themeStartedRef.current || !themeAudioRef.current) return
+  const startThemeMusic = async (event?: Event) => {
+  const target = event?.target as HTMLElement | null
 
-      try {
-        await themeAudioRef.current.play()
-        themeStartedRef.current = true
-        setThemeStarted(true)
-        setThemePaused(false)
+  // Do not let the pause/play button trigger the global click-start logic
+  if (target?.closest('[data-music-control="true"]')) return
 
-        window.removeEventListener('click', startThemeMusic)
-        window.removeEventListener('touchstart', startThemeMusic)
-        window.removeEventListener('keydown', startThemeMusic)
-      } catch (error) {
-        console.log('Theme music could not start yet:', error)
-      }
-    }
+  if (themeStartedRef.current || !themeAudioRef.current) return
+
+  try {
+    await themeAudioRef.current.play()
+    themeStartedRef.current = true
+    setThemeStarted(true)
+    setThemePaused(false)
+  } catch (error) {
+    console.log('Theme music could not start yet:', error)
+  }
+}
 
     window.addEventListener('click', startThemeMusic)
     window.addEventListener('touchstart', startThemeMusic)
