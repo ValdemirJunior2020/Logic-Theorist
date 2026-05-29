@@ -1,0 +1,15 @@
+{
+  "name": "logic-theorist-call-center-madness",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Voice Matrix-powered retro call center logic game with React, Express, and Google Apps Script score saving.",
+  "scripts": {
+    "install:all": "npm install && npm install --prefix client && npm install --prefix server",
+    "dev": "concurrently \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "build": "npm run build --prefix client",
+    "start": "npm run start --prefix server"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
